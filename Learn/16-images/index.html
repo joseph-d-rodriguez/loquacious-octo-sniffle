@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="app1">
+<head>
+  <meta charset="utf-8">
+  <title>Country List with Images</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="CountryController">
+  <div class="container-fluid">
+    <p><a href="https://docs.angularjs.org/api/ng/directive/ngSrc">ngSrc docs</a></p>
+
+    <div class="row">
+      <div class="col-md-8 col-md-push-2">
+
+        <ul>
+          <li ng-repeat="c in countries" class="country">
+            <!-- What happenes with plain src? -->
+            <a ng-href="#/country/{{c.countryCode}}">
+              <img ng-src="../demo-data/flags/{{c.countryCode}}.png" class="flag"></a>
+            <a ng-href="#/country/{{c.countryCode}}">{{c.countryName}}</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="images.js"></script>
+</body>
+</html>

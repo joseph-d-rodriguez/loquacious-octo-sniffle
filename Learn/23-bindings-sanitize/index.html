@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Sanitizing HTML</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <p><a href="https://docs.angularjs.org/api/ngSanitize">ngSanitize docs</a></p>
+
+  <div ng-controller="DemoController">
+    <dl>
+      <dt>ng-bind</dt>
+      <dd ng-bind="unsafeHtml"></dd>
+      <hr>
+      <dt>ng-bind-html (Removes potentially unsafe attributes, such as "onmouseover", "ng-click", "style", etc.)</dt>
+      <dd ng-bind-html="unsafeHtml"></dd>
+      <hr>
+      <dt>$sce.trustAsHtml (Lets all the HTML pass through - BE CAREFUL!)</dt>
+      <dd ng-bind-html="trustedHtml"></dd>
+      <hr>
+    </dl>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="promisesApp">
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div ng-controller="MyController">
+
+      <h3>Start Here</h3>
+      <button ng-click="go1()">GO1</button>
+      <button ng-click="stop()">STOP1</button>
+
+      <h3>Success:</h3>
+      <p ng-bind="message"></p>
+
+      <h3>Errors:</h3>
+      <pre ng-bind="oops | json"></pre>
+
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="promises.js"></script>
+  <script src="promise_utils.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" ng-app="formExample">
+<head>
+  <meta charset="utf-8">
+  <title>Custom Validation</title>
+</head>
+<body>
+  <form name="form" novalidate>
+    <div>
+      Size (integer 0 - 100):
+      <input type="number" ng-model="size" name="size"
+            min="0" max="100" must-be-even /><br />
+      <b ng-show="form.size.$error.even">
+        The value is not even</b>
+      <b ng-show="form.size.$error.min || form.size.$error.max">
+        The value must be in range 0 to 100</b>
+    </div>
+    <p>
+      Model value: {{size}}
+    </p>
+  </form>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

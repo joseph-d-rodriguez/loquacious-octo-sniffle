@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="demoApp">
+<head>
+  <meta charset="utf-8">
+  <title>Stateful Service Example</title>
+  <style>
+    .orange-outline { border: 1px solid orange; padding: 2px; margin: 2px }
+  </style>
+</head>
+<body>
+  <div ng-controller="AnotherController">
+	  <h2>Controllers Sharing a Stateful Service</h2>
+
+	  <div ng-controller="YellowController" class="orange-outline">
+	      <input style="width:40px" ng-model="sharedValues.a"> +
+	      <input style="width:40px" ng-model="values.b">
+	      <button ng-click="add()">=</button> <span ng-bind="add()"></span>
+	  </div>
+	  <div ng-controller="YellowController" class="orange-outline">
+	      <input style="width:40px" ng-model="sharedValues.a"> +
+	      <input style="width:40px" ng-model="values.b">
+	      <button ng-click="add()">=</button> <span ng-bind="add()"></span>
+	  </div>
+	  <div ng-controller="YellowController" class="orange-outline">
+	      <input style="width:40px" ng-model="sharedValues.a"> +
+	      <input style="width:40px" ng-model="values.b">
+	      <button ng-click="add()">=</button> <span ng-bind="add()"></span>
+	  </div>
+
+	  <button ng-click="start()">start</button>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

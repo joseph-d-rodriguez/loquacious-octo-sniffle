@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="app1">
+<head>
+  <meta charset="utf-8">
+  <title>Sort - Largest Countries</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <p><a href="https://docs.angularjs.org/api/ng/filter/orderBy">orderBy docs</a></p>
+
+    <div class="row" ng-controller="CountryController">
+      <div class="col-md-4">
+
+        <p>Search: <input ng-model="query"></p>
+        <p>Sort by:
+        <select ng-model="orderProp">
+          <option value=""></option>
+          <option value="countryName">Alphabetical</option>
+          <option value="areaInSqKm">Smallest</option>
+          <option value="-areaInSqKm">Largest</option>
+          <option value="-(population / areaInSqKm)">Densest</option>
+        </select></p>
+
+        <p>order = {{orderProp}}</p>
+
+      </div>
+      <div class="col-md-8">
+
+        <ul>
+          <li ng-repeat="country in countries | filter:query | orderBy:orderProp">
+            <span><b>{{country.countryName}}</b></span>
+            <div>Capital: {{country.capital}}</div>
+            <div>Population: {{country.population}}</div>
+            <div>Area (sq.km): {{country.areaInSqKm}}</div>
+            <div>Population Density: {{country.population / country.areaInSqKm}}</div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="sort.js"></script>
+</body>
+</html>

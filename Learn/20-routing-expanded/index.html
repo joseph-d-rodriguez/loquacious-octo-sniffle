@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="BootcampApp">
+<head>
+	<meta charset="utf-8">
+	<title ng-controller="TitleController as tc"
+	  ng-bind="tc.title">Routing App</title>
+	<link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <p><a href="https://docs.angularjs.org/api/ngRoute">Routing docs</a></p>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-push-2">
+
+        <div ng-include="'header.html'"></div>
+
+      	<ng-view></ng-view>
+
+        <hr>
+        <footer class="container-fluid">
+          <p><a href="https://code.angularjs.org/1.4.7/docs/api/ngRoute/provider/$routeProvider">Routing docs</a>,
+          <a href="https://docs.angularjs.org/api/ngRoute/service/$route">more</a>, or if need even more,
+          <a href="https://github.com/angular-ui/ui-router">UI-Router</a></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+ 	<script src="../lib/angular/angular.js"></script>
+	<script src="../lib/angular-route/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="misc.js"></script>
+	<script src="green.js"></script>
+</body>
+</html>

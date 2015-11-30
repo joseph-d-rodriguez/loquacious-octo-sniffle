@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <div class="row">
+        <img ng-src="../demo-data/flags/{{cdc.country.code}}.png" class="flag" ng-click="cdc.count()">
+
+        <h1>{{cdc.country.name}}</h1>
+
+        <p>Capital: {{cdc.country.capital}}</p>
+        <p>Largest City: {{cdc.country.largest_city}}</p>
+        <p>Area (sq.mi.): {{cdc.country.area_sq_mi}}</p>
+        <p>GDP (total): {{cdc.country.gdp.total}}</p>
+        <p>GDP (per capita): {{cdc.country.gdp.per_capita}}</p>
+      </div>
+      <div class="row">
+        <h2>You've clicked the flag {{cdc.counter}} times.</h2>
+      </div>
+    </div>
+  </div>
+</div>

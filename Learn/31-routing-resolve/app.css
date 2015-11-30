@@ -1,0 +1,18 @@
+body {
+  padding-top: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+img.flag {
+  float: left;
+  border: 1px solid black;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 2em;
+  height: 300px;
+  width: 400px;
+}

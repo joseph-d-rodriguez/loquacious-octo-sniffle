@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="sandbox">
+<head>
+  <meta charset="utf-8">
+  <title>Controller As</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <style>
+    .green-outline { border: 3px solid green; padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <p><a href="https://docs.angularjs.org/guide/controller">Controller docs</a></p>
+
+  <h2>Controller As Examples</h2>
+
+  <div ng-controller="FirstController as outer" class="green-outline">
+    Name: <input ng-model="outer.name"> {{ outer.name }}
+
+    <div ng-controller="FirstController as inner" class="green-outline">
+      <p>Inner Name:
+        <input ng-model="inner.name"> {{ inner.name }}</p>
+      <p>Outer Name:
+        <input ng-model="outer.name"> {{ outer.name }}</p>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

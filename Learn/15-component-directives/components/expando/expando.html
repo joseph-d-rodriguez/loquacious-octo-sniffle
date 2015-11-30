@@ -1,0 +1,10 @@
+<div class='panel panel-default'>
+  <div class="panel-heading">
+    <button ng-click="show = !show">...</button>
+    {{heading}}
+  </div>
+  <div class="panel-body" ng-if="show">
+    <!-- Sometimes people use the attribute form just to avoid repetition. -->
+    <div ng-transclude></div>
+  </div>
+</div>

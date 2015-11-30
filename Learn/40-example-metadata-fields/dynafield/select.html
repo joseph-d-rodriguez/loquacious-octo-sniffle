@@ -1,0 +1,6 @@
+<select id="{{inputId}}"
+       name="{{inputId}}"
+       class="form-control"
+       ng-model="model"
+       ng-options="option.code as option.display for option in meta.options track by option.code"
+       ng-options=""></select>

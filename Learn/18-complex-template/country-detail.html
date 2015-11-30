@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <div class="row">
+        <img ng-src="../demo-data/flags/{{country.code}}.png" class="flag">
+
+        <h1>{{country.name}}</h1>
+
+        <p>Capital: {{country.capital}}</p>
+        <p>Largest City: {{country.largest_city}}</p>
+        <p>Area (sq.mi.): {{country.area_sq_mi}}</p>
+        <p>GDP (total): {{country.gdp.total}}</p>
+        <p>GDP (per capita): {{country.gdp.per_capita}}</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <button ng-click="showEthnicGroups = !showEthnicGroups">Show / Hide Ethnic Groups</button>
+          <table ng-show="showEthnicGroups">
+            <tr ng-repeat="g in country.ethnic_groups">
+              <td>{{g.ethnicity}}</td>
+              <td ng-class="{highlight: g.pct > 10}">{{g.pct}}%</td>
+            </tr>
+          </table>
+          <p ng-hide="showEthnicGroups">(Ethnic groups hidden)</p>
+        </div>
+        <div class="col-md-4">
+          <button ng-click="toggleGovt()">Add / Remove Gov't Officials from DOM</button>
+          <dl ng-if="showGovt">
+            <dt ng-repeat-start="o in country.government_officials">{{o.title}}</dt>
+            <dd ng-repeat-end>{{o.name}}</dd>
+          </dl>
+          <p ng-if="!showGovt">(Government Officials removed)</p>
+        </div>
+        <div class="col-md-4">
+          <select ng-model="otherInfo">
+            <option value=""></option>
+            <option value="docs">Important Documents</option>
+            <option value="currency">Currency</option>
+          </select>
+          <div ng-switch on="otherInfo">
+            <ul ng-switch-when="docs">
+              <li ng-repeat="d in country.documents">{{d.name}}: {{d.date}}</li>
+            </ul>
+            <p ng-switch-when="currency">{{country.currency.description}} ({{country.currency.code}})</p>
+            <p ng-switch-default>(No info selected)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

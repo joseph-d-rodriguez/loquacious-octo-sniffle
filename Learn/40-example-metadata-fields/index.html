@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="exampleApp">
+<head>
+  <meta charset="utf-8">
+  <title>Nested Directive Example</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <!-- Occasionally it is useful to put the overall grid outside the routes -->
+  <div class="container-fluid" ng-controller="DataEntryController">
+    <div class="row">
+      <div class="col-lg-6 col-lg-push-1">
+
+        <div ng-controller="NavController" onselectstart="return false">
+          <button ng-disabled="!route.current.prevRoute"
+                  class="btn btn-small btn-default"
+                  ng-click="prev()">Back</button>
+          <button ng-disabled="!route.current.nextRoute"
+                  class="btn btn-small btn-default"
+                  ng-click="next()">Next</button>
+        </div>
+
+        <ng-view></ng-view>
+
+      </div>
+      <div class="col-lg-3 col-lg-push-2">
+        <h3>Internal Data Display</h1>
+        <h4>Applicant Data:</h2>
+        <pre ng-bind="applicant | json"></pre>
+        <h4>Qualification Data:</h2>
+        <pre ng-bind="qualification | json"></pre>
+        <h4>Reference Data:</h2>
+        <pre ng-bind="reference | json"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../lib/angular-route/angular-route.js"></script>
+  <script src="../lib/angular-messages/angular-messages.js"></script>
+  <script src="../lib/angular-ui-mask/dist/mask.js"></script>
+  <script src="../lib/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="../lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <!-- In a real application, the following might be split out as a
+       library with its own build process and so on. -->
+  <script src="dynafield/dynafield.js"></script>
+  <script src="dynafield/text.js"></script>
+  <script src="dynafield/ssn.js"></script>
+  <script src="dynafield/date.js"></script>
+  <script src="dynafield/zip.js"></script>
+  <script src="dynafield/select.js"></script>
+  <script src="dynafield/email.js"></script>
+  <script src="dynafield/phone.js"></script>
+
+  <!-- A real application would be split among many files -->
+  <script src="example/app.js"></script>
+  <script src="example/dictionary.js"></script>
+
+</body>
+</html>

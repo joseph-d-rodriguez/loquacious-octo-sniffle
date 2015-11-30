@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="exampleApp">
+<head>
+  <meta charset="utf-8">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container-fluid" ng-controller="FormController">
+    <p><a href="https://docs.angularjs.org/guide/forms">Form docs</a></p>
+
+    <form name="userForm" novalidate>
+        <div>
+            First name: <input name="uFirstName" ng-model="fc.name.first" required>
+            <div style="color: red" ng-show="(userForm.$submitted || userForm.uFirstName.$touched) && userForm.uFirstName.$error.required">
+                Please enter a first name.
+            </div>
+        </div>
+        <div>
+            Last name: <input name="uLastName" ng-model="fc.name.last" required>
+            <div style="color: red" ng-show="userForm.uLastName.$touched && userForm.uLastName.$error.required">
+                Please enter a last name.
+            </div>
+        </div>
+        <div>
+            Email: <input name="uEmail" type="email" ng-model="fc.email" required
+                          ng-minlength="5" ng-maxlength="20" ng-model-options="{debounce: 500}">
+            <div ng-show="(userForm.$submitted || userForm.uEmail.$touched)">
+              <div ng-messages="userForm.uEmail.$error" style="color:maroon" role="alert">
+                <!-- Only one message is displayed, order matters -->
+                <div ng-message="required">Please enter an email.</div>
+                <div ng-message="email">Please enter a valid email address.</div>
+                <div ng-message="minlength">Your email is too short.</div>
+                <div ng-message="maxlength">Your email is too long</div>
+              </div>
+            </div>
+        </div>
+        <div>
+            Age: <input name="uAge" type="number" ng-model="fc.age" ng-min="18" required>
+            <div style="color: red" ng-show="userForm.uAge.$touched && userForm.uAge.$error.required">
+                Please enter your age.
+            </div>
+            <div style="color: red" ng-show="userForm.uAge.$touched && userForm.uAge.$error.min">
+                Must be at least 18.
+            </div>
+        </div>
+        <button type="submit" ng-click="fc.submit(userForm)">Submit</button>
+    </form>
+    <pre ng-bind="userForm | json"></pre>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../lib/angular-messages/angular-messages.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>

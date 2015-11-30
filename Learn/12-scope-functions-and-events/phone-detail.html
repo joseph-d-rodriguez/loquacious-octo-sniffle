@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <img ng-src="{{mainImageUrl}}" class="phone">
+
+      <h1>{{phone.name}}</h1>
+
+      <p>{{phone.description}}</p>
+
+      <div>
+        <ul class="phone-thumbs">
+          <li ng-repeat="imgURL in phone.images">
+            <img ng-src="{{imgURL}}" ng-click="setImage(imgURL)">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

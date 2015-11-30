@@ -1,0 +1,13 @@
+<section>
+  <div ng-repeat="a in addresses">
+    <address-entry label="{{a.heading}} Address!" addr="a"></address-entry>
+  </div>
+  <button ng-click="add()">Add Address for {{purpose}}</button>
+</section>
+
+<section style="margin-top: 20px">
+  <expando heading="Raw Data">
+    <h5>raw stuff</h5>
+    <pre>{{addresses | json}}</pre>
+  </expando>
+</section>

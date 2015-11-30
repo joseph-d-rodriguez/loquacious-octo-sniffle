@@ -1,0 +1,13 @@
+body {
+  padding-top: 20px;
+}
+
+.country {
+  margin: 1em;
+}
+
+.flag {
+  max-height: 150px;
+  max-width: 150px;
+  border: 1px solid black;
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="demoApp">
+<head>
+  <meta charset="utf-8">
+  <title>Nesting Example</title>
+  <style>
+    .orange-outline { border: 1px solid orange; padding: 2px; margin: 2px }
+  </style>
+</head>
+<body>
+  <p><a href="https://docs.angularjs.org/guide/scope">Scope docs</a></p>
+
+  <h2>Side by Side Controllers</h2>
+
+  <div ng-controller="YellowController" class="orange-outline">
+      <input style="width:40px" ng-model="values.a"> +
+      <input style="width:40px" ng-model="values.b">
+      <button ng-click="add()">=</button> <span ng-bind="total"></span>
+  </div>
+  <div ng-controller="YellowController" class="orange-outline">
+      <input style="width:40px" ng-model="values.a"> +
+      <input style="width:40px" ng-model="values.b">
+      <button ng-click="add()">=</button> <span ng-bind="total"></span>
+  </div>
+  <div ng-controller="YellowController" class="orange-outline">
+      <input style="width:40px" ng-model="values.a"> +
+      <input style="width:40px" ng-model="values.b">
+      <button ng-click="add()">=</button> <span ng-bind="total"></span>
+  </div>
+
+  <h2>"Problem"</h2>
+
+  <div ng-controller="OuterController">
+    <h4>OuterController</h4>
+    Name: <input ng-model="first"> Name: {{first}}
+
+    <div style="padding-left: 20px">
+      <div ng-controller="InnerController">
+        <h4>InnerController</h4>
+        Name: <input ng-model="first"> Name: {{first}}
+      </div>
+
+      <div ng-if="'cdcdf'">
+        <h4>InnerController</h4>
+        Name: <input ng-model="first"> Name: {{first}}
+      </div>
+
+      <div ng-controller="InnerController">
+        <h4>InnerController</h4>
+        Name: <input ng-model="first"> Name: {{first}}
+      </div>
+    </div>
+  </div>
+
+  <h2>"Solution"</h2>
+
+  <div ng-controller="OuterController">
+    <h4>OuterController</h4>
+    Name: <input ng-model="name.first"> Name: {{name.first}}
+
+    <div ng-controller="InnerController">
+      <h4>InnerController</h4>
+      Name: <input ng-model="name.first"> Name: {{name.first}}
+    </div>
+
+    <div ng-controller="InnerController">
+      <h4>InnerController</h4>
+      Name: <input ng-model="name.first"> Name: {{name.first}}
+    </div>
+
+    <div ng-controller="InnerController">
+      <h4>InnerController</h4>
+      Name: <input ng-model="name.first"> Name: {{name.first}}
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

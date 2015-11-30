@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="app1">
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Country List</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="CountryController">
+  <div class="container-fluid">
+    <p><a href="https://docs.angularjs.org/api/ng/service/$http">http docs</a> -
+      <a href="https://docs.angularjs.org/guide/di">DI docs</a></p>
+
+    <div class="row">
+      <div class="col-md-4">
+
+        <p>Search: <input ng-model="query"></p>
+        <p>Sort by:
+        <select ng-model="orderProp">
+          <option value="countryName">Alphabetical</option>
+          <option value="areaInSqKm">Smallest</option>
+          <option value="-areaInSqKm">Largest</option>
+        </select></p>
+
+      </div>
+      <div class="col-md-8">
+        <ul>
+          <li ng-repeat="c in countries | filter:query | orderBy:orderProp">
+            <b>{{c.countryName}}</b>
+            <span>Area (Sq Km): {{c.areaInSqKm}}</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="ajax.js"></script>
+</body>
+</html>

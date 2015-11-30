@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>More Dependency Injection</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <p><a href="https://docs.angularjs.org/guide/di">orderBy docs</a></p>
+  <div ng-controller="AController">
+    <h1>AController</h1>
+    <div>URL: {{url}}</div>
+    <div>Counter: {{counter}}</div>
+  </div>
+  <div ng-controller="BController">
+    <h1>BController</h1>
+    <div>URL: {{url}}</div>
+    <div>Counter: {{counter}}</div>
+  </div>
+  <div ng-controller="CController">
+    <h1>CController</h1>
+    <div>URL: {{url}}</div>
+    <div>Counter: {{counter}}</div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="exampleA.js"></script>
+  <script src="exampleB.js"></script>
+  <script src="exampleC.js"></script>
+</body>
+</html>

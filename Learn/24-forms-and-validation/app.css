@@ -1,0 +1,8 @@
+
+form.ng-invalid.ng-submitted {
+  border: 2px dotted red;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}

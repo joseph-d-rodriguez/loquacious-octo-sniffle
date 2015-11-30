@@ -1,0 +1,27 @@
+<h1>Applicant Information</h1>
+
+<form name="f1" novalidate autocomplete="off" class="form-horizontal">
+
+  <!-- each page is its own form, because AngularJS 1.x
+       disagrees with dynamic forms. -->
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <dynafield model="applicant.firstName"></dynafield>
+      <dynafield model="applicant.lastName"></dynafield>
+      <dynafield model="applicant.mi"></dynafield>
+      <dynafield model="applicant.SSN"></dynafield>
+
+    </div>
+    <div class="col-md-6">
+
+      <dynafield model="applicant.birthday"></dynafield>
+      <dynafield model="applicant.phoneHome"></dynafield>
+      <dynafield model="applicant.zip" zip-country-model="applicant.country"></dynafield>
+      <dynafield model="applicant.country"></dynafield>
+
+    </div>
+  </div>
+
+</form>

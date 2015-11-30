@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Directive Demo App</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <p><a href="https://docs.angularjs.org/guide/directive">Directive Guide</a></p>
+
+        <h3>These work:</h3>
+
+        <!-- Declared in code as: .directive("cardBlock" -->
+        <card-block></card-block>
+        <card:block></card:block>
+        <card_block></card_block>
+        <div card-block></div>
+        <div card:block></div>
+        <div data-card-block></div>
+        <div x-card-block></div>
+        <div class="card-block"></div>
+
+        <!-- what does this mean?
+        <card-block />
+        -->
+
+        <div class="clearfix"></div>
+        <h3>These don't:</h3>
+
+        <cardBlock></cardBlock>
+        <div cardBlock></div>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Wrapper Card:</h3>
+
+        <wrapper>
+          <p>This is an example of a paragraph rambling on pointlessly for
+            many words with no punctuation or any other helpful pacing as
+            its only purpose was to use up space on the screen and in the
+            mind without producing any value whatsover.</p>
+        </wrapper>
+
+        <wrapper>
+          <p>This paragraph is short and to the point, which is that
+            it is just filler.</p>
+        </wrapper>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+body {
+  padding-top: 20px;
+}
+
+.card {
+  padding: 3px;
+  border: 1px solid silver;
+  margin: 3px;
+  float: left;
+}

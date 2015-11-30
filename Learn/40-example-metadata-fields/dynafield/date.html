@@ -1,0 +1,24 @@
+<span class="input-group">
+  <input id="{{inputId}}"
+         name="{{inputId}}"
+  			 type="text"
+  			 class="form-control"
+  			 ng-model="model"
+  			 uib-datepicker-popup
+         ng-required="{{meta.required}}"
+  			 is-open="opened">
+  <span class="input-group-btn">
+    <button type="button"
+            class="btn btn-default"
+            ng-click="opened = !opened">
+        <i class="glyphicon glyphicon-calendar"></i></button>
+  </span>
+</span>
+
+<!--
+  Other available datepicker options:
+ min-date="minDate"
+ max-date="maxDate"
+ datepicker-options="dateOptions"
+ date-disabled="disabled(date, mode)"
+ close-text="Close" -->

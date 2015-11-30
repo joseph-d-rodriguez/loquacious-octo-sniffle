@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="app1">
+<head>
+  <meta charset="utf-8">
+  <title>Kyle's example</title>
+	<link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <p>(no obvious relevant doc page)</p>
+
+  <div class="container" ng-controller="SssCtrl">
+    <button ng-click="foo()">Click me</button>
+
+    <br>
+    <input ng-model="address">
+    <br>
+    {{address}}
+
+    <hr>
+    <input type="checkbox" ng-model="on"> ON
+
+    <!-- set the style to display-none to skip rendering -->
+    <div ZZZstyle="display: none" ng-if="on">
+      <!-- Try :: -->
+      <span ng-repeat="x in boxes" ng-bind="address"></span>
+    </div>
+
+    <hr>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

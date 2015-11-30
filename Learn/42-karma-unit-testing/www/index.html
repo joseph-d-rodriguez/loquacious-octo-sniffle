@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="kyle.app">
+<head>
+  <meta charset="utf-8">
+  <title>Kyle's example</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="js/kyle/app.js"></script>
+  <script src="js/kyle/other.js"></script>
+</head>
+<body>
+
+  <div ng-controller="top">
+
+    <h1>{{title()}}</h1>
+    <h3>adderator result = {{result}}</h3>
+
+  <div ng-controller="sss">
+    sss Name = {{name}}<br>
+
+    count = {{count()}}<br>
+
+    <button ng-click="foo()">Click me</button>
+
+    <br><input ng-model="address">
+    <br>{{address}}
+    <br>
+
+    <div style="display: none">
+     <span ng-repeat="x in boxes" ng-bind="address"></span>
+    </div>
+
+  </div>
+  </div>
+
+</body>
+</html>

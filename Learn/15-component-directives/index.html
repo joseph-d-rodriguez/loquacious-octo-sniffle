@@ -1,0 +1,44 @@
+<html ng-app="AddressApp">
+<head>
+  <title>Angular Demo App</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <p><a href="https://docs.angularjs.org/guide/directive">Directive Guide in the Angular documentation</a></p>
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <h3>Address Book:</h3>
+        <address-book purpose="Billing"></address-book>
+
+      </div>
+      <div class="col-md-6">
+        <h3>Message Boxes:</h3>
+
+        <message-box msg="I am a {{'vital' + ' message'}}">
+        </message-box>
+
+        <message-box msg="I am another message">
+        </message-box>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+
+  <script src="components/addressBook-link/addressBook.js"></script>
+  <!-- Other Variations:
+  <script src="components/addressBook-scope/addressBook.js"></script>
+  <script src="components/addressBook-bind-to/addressBook.js"></script>
+  -->
+
+  <script src="components/addressEntry/addressEntry.js"></script>
+  <script src="components/clickEdit/clickEdit.js"></script>
+  <script src="components/messageBox/messageBox.js"></script>
+  <script src="components/expando/expando.js"></script>
+</body>
+</html>

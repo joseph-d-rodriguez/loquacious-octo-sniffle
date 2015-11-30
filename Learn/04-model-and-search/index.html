@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Largest Countries</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="https://docs.angularjs.org/api/ng/filter/filter">filter docs</a></p>
+
+    <div class="row" ng-controller="CountryController">
+      <div class="col-md-4">
+
+        Search: <input ng-model="query">
+
+      </div>
+      <div class="col-md-8">
+
+        <ul>
+          <li ng-repeat="country in countries | filter:query">
+            <span><b>{{country.countryName}}</b></span>
+            <div>Capital: {{country.capital}}</div>
+            <div>Population: {{country.population}}</div>
+            <div>Area (sq.km): {{country.areaInSqKm}}</div>
+          </li>
+        </ul>
+
+        <!--
+        Real:       ng-repeat="country in countries | filter:query"
+        Understand: ng-repeat="country in (countries | filter:query)"
+                    country in filter(countries, query)
+        -->
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="application.js"></script>
+</body>
+</html>

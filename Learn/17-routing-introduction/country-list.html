@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+
+      <p>Search: <input ng-model="query"></p>
+      <p>Sort by:
+      <select ng-model="orderProp">
+        <option value=""></option>
+        <option value="countryName">Alphabetical</option>
+        <option value="areaInSqKm">Smallest</option>
+        <option value="-areaInSqKm">Largest</option>
+      </select></p>
+
+    </div>
+    <div class="col-md-6">
+
+      <ul class="flags">
+        <li ng-repeat="c in countries | filter:query | orderBy:orderProp" class="country">
+          <a ng-href="#/country/{{c.countryCode}}">
+            <img ng-src="../demo-data/flags/{{c.countryCode}}.png" class="flag">
+            {{c.countryName}}
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="swapiApp">
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <p><a href="https://docs.angularjs.org/api/ng/service/$http">http docs</a></p>
+    <p><b>Beware of Chrome mixed-content AJAX restrictions.</b></p>
+
+    <div class="row" ng-controller="SwapiExampleController as swc">
+      <div class="col-md-8 col-push-md-2">
+
+        <p ng-repeat="p in swc.people.results">{{ p.name }}, {{ p.filmNames | json}}</p>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="swapi.js"></script>
+</body>
+</html>

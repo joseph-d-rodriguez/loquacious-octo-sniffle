@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="formExample">
+<head>
+  <meta charset="utf-8">
+  <title>Custom Asynchronous Validation</title>
+</head>
+<body>
+  <form name="form" novalidate>
+    <h2>Zip Code Westerlinesss Check</h2>
+    <p>Examples: NYC 10007, San Diego 92121<p>
+    <div>
+      ZIP Code:
+      <input type="text" ng-model="zip" name="zip" western-zip />
+      <b ng-show="form.zip.$pending.westernZip">Checking if ZIP code is western...</b>
+      <b ng-show="form.zip.$error.westernZip">ZIP code is not west enough.</b>
+    </div>
+    <div>
+      <p>Model value: {{zip}}</p>
+    </div>
+  </form>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

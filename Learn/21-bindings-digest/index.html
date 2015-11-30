@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="app1">
+<head>
+  <meta charset="utf-8">
+  <title>Kyle's example</title>
+	<link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <p>(no obvious relevant doc page)</p>
+
+  <div ng-controller="TopCtrl" class="container">
+
+    <input ng-model="a"><input ng-model="b">
+    {{ total }}
+
+
+    <h1>{{title()}}</h1>
+
+    <div ng-controller="SssCtrl">
+      sss Name = {{name}}<br>
+      count = {{count()}}<br>
+      <button ng-click="foo()">Click me</button>
+
+      <br><input ng-model="address">
+      <br>{{address}}
+      <hr>
+
+    </div>
+  </div>
+
+  <script src="../lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="other.js"></script>
+</body>
+</html>
