@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="myAngularModule">
+    <head>
+        <title>Workshop #1</title>
+    </head>
+    <body ng-controller="MyAngularModuleController">
+        <p>{{'Is this working?'}}</p>
+        <div ng-repeat="n in [1,2,3,4]">
+            <p ng-bind="n">BEFORE ANGULAR</p>
+        </div>
+
+        <hr>
+        <div>
+            <p ng-bind="domain">DOMAIN HERE</p>
+        </div>
+        <hr>
+
+        <static-text></static-text>
+
+        <static-text>
+            <span>Yo, I am totally in your transclusions</span>
+        </static-text>
+
+        <static-text>
+            <div>
+                <span>Parent Text</span>
+                <input ng-model="pText">
+                <span ng-bind="pText">BEFORE ANGULAR</span>
+
+                <div ng-repeat="backpack in backpacks">
+                    <h6>Backpack: {{backpack.brand}}: {{backpack.model}}</h6>
+                </div>
+            </div>
+        </static-text>
+
+        <script src="../lib/angular/angular.js"></script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
