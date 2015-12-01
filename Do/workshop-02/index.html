@@ -11,8 +11,14 @@
                 <p ng-bind="something"></p>
 
                 <h3>Backpacks:</h3>
+
+                <div id="querySection">
+                    <h4>Search</h4>
+                    <input type="checkbox" ng-model="illestQuery"><span>Only the good backpacks?</span><br>
+                </div>
+
                 <p>Errors: {{backpacksError}}</p>
-                <pre ng-bind="backpacks | json"></pre>
+                <pre ng-bind="backpacks | filter:{illest:illestQuery}| json"></pre>
             </section>
 
             <section ng-controller="PublicBackpackController">
