@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Workshop #2</title>
+    </head>
+    <body ng-app="workshop2App">
+        <div>
+
+
+            <section ng-controller="BackpackDataController">
+                <p ng-bind="something"></p>
+
+                <h3>Backpacks:</h3>
+                <p>Errors: {{backpacksError}}</p>
+                <pre ng-bind="backpacks | json"></pre>
+            </section>
+
+            <section ng-controller="PublicBackpackController">
+                <h3>Public Backpacks:</h3>
+                <public-backpacks></public-backpacks>
+            </section>
+
+        </div>
+
+        <script src="../lib/angular/angular.js"></script>
+        <script src="public-backpack-model.js"></script>
+        <script src="backpack-data-model.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
