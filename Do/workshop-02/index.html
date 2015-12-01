@@ -17,8 +17,11 @@
                     <input type="checkbox" ng-model="illestQuery"><span>Only the good backpacks?</span><br>
                 </div>
 
-                <p>Errors: {{backpacksError}}</p>
-                <pre ng-bind="backpacks | filter:{illest:illestQuery}| json"></pre>
+                <img src="./spiffygif_30x30.gif" ng-hide="backpacks">
+                <p ng-hide="!backpacks">Errors: {{backpacksError}}</p>
+                <pre style="height: 100px;overflow: scroll;" ng-hide="!backpacks" ng-bind="backpacks | filter:{illest:illestQuery}| json"></pre>
+
+                <display-backpacks></display-backpacks>
             </section>
 
             <section ng-controller="PublicBackpackController">

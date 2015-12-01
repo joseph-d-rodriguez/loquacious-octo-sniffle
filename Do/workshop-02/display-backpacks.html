@@ -1,0 +1,30 @@
+<table style="weight: bold;" border="all">
+    <tr>
+        <th>
+            Category
+        </th>
+        <th>
+            Brand
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Image
+        </th>
+    </tr>
+    <tr ng-repeat="b in backpacks">
+        <td>
+            {{b.category}}
+        </td>
+        <td>
+            {{b.brand}}
+        </td>
+        <td>
+            {{b.model}}
+        </td>
+        <td>
+            <a href="{{b.link}}"><img src="{{b.img}}" style="height: 50px;" alt="{{b.category + '|' + b.brand + '|' + b.model}}"></a>
+        </td>
+    </tr>
+</table>
