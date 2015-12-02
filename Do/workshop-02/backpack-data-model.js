@@ -2,13 +2,14 @@
     angular.module('backpackData', [])
 
     .controller('BackpackDataController', function($scope, backpackData, $timeout) {
-        $scope.something = 'a variable for something';
+        var that = this;
+        that.something = 'a variable for something';
 
         $timeout(function() {
             backpackData.get().then(function(response) {
-                $scope.backpacks = response.data;
+                that.backpacks = response.data;
             }).catch(function(response) {
-               $scope.backpacksError = response.status + ': ' + response.data;
+               that.backpacksError = response.status + ': ' + response.data;
             });
         },
         2000);
