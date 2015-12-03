@@ -38,5 +38,18 @@
                 superAwesomeStuffCopy: "=param"
             }
         }
+    })
+
+    .directive('backpacksTable', function() {
+        return {
+            restrict: 'E',
+            templateUrl: './components/backpacks/backpacks-table.html',
+            controller: function backpacksTableControllerConstructor(){},
+            controllerAs: 'bpTblCtrl',
+            scope: {},
+            bindToController: {
+                backpacks: '=param'
+            }
+        }
     });
 })(window.angular);

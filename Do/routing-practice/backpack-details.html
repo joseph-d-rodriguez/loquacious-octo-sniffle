@@ -1,0 +1,8 @@
+<img ng-hide="ctrl.backpack" src="spinner.gif">
+<div ng-if="ctrl.backpack">
+    <!--<pre>{{ctrl}}</pre>-->
+    <hr>
+    <h1><span style="background-color: yellow;color: grey;">{{ctrl.backpack.brand}}</span> {{ctrl.backpack.model}}</h1>
+    <a ng-href="{{ctrl.backpack.link}}"><img ng-src="{{ctrl.backpack.img}}"></a>
+    <hr>
+</div>

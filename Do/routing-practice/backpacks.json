@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Odyssey",
+    "img": "http://images.jansport.com/is/image/JanSport/T14G_008_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/daypacks/odyssey-t14g?variationId=008"
+  },
+  {
+    "id": 2,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Oxidation",
+    "img": "http://images.jansport.com/is/image/JanSport/T12C_02U_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/daypacks/oxidation-t12c?variationId=02U"
+  },
+  {
+    "id": 3,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Hatchet",
+    "img": "http://images.jansport.com/is/image/JanSport/T52S_9RV_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/daypacks/hatchet-T52S?variationId=9RV"
+  },
+  {
+    "id": 4,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Watchtower",
+    "img": "http://images.jansport.com/is/image/JanSport/T11Z_02T_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/daypacks/watchtower-t11z?variationId=02T"
+  },
+  {
+    "id": 5,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Fox Hole",
+    "img": "http://images.jansport.com/is/image/JanSport/T52M_9RV_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/daypacks/fox-hole-T52M?variationId=9RV"
+  },
+  {
+    "id": 6,
+    "brand": "boreas",
+    "category": "Daypacks",
+    "model": "Excelsior",
+    "img": "http://cdn.shopify.com/s/files/1/0387/3585/products/Excel_Bla1_large.jpg?v=1430412368",
+    "link": "http://www.boreasgear.com/collections/daypacks/products/excelsior-30"
+  },
+  {
+    "id": 7,
+    "brand": "Jansport",
+    "category": "Daypacks",
+    "model": "Envoy",
+    "img": "http://images.jansport.com/is/image/JanSport/T45G_0BE_front?$236x204$",
+    "link": "http://www.jansport.com/shop/en/jansport-us/laptop-tablet-backpacks/envoy-T45G?variationId=0BE"
+  },
+  {
+    "id": 8,
+    "brand": "boreas",
+    "category": "Daypacks",
+    "model": "Larkin",
+    "illest": true,
+    "img": "http://cdn.shopify.com/s/files/1/0387/3585/products/Lark_Bla1_large.jpg?v=1430421016",
+    "link": "http://www.boreasgear.com/collections/daypacks/products/larkin"
+  }
+]

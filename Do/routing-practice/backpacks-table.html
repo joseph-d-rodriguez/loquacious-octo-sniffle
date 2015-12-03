@@ -1,0 +1,38 @@
+<img src="./spinner.gif" ng-hide="ctrl.backpacks.data">
+<table ng-show="ctrl.backpacks.data" style="weight: bold;" border="all">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Brand
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Image
+        </th>
+    </tr>
+    <tr ng-repeat="b in ctrl.backpacks.data">
+        <td>
+            <a ng-href="#/backpacks/{{b.id}}">{{b.id}}</a>
+        </td>
+        <td>
+            {{b.category}}
+        </td>
+        <td>
+            {{b.brand}}
+        </td>
+        <td>
+            {{b.model}}
+        </td>
+        <td>
+            <a ng-href="{{b.link}}"><img ng-src="{{b.img}}" style="height: 50px;" alt="{{b.category + '|' + b.brand + '|' + b.model}}"></a>
+        </td>
+    </tr>
+</table>
+

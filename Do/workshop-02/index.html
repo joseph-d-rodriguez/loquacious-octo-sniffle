@@ -22,10 +22,18 @@
             <div>
 
                 <div ng-controller="BackpacksController as bpCtrl">
+                    <hr>
+                    <h5>bpCtrl.backpacks</h5>
                     <pre>{{bpCtrl.backpacks}}</pre>
+                    <hr>
                 </div>
 
                 <backpacks-tag param="{one:1,two:2,three:3}"></backpacks-tag>
+                <backpacks-tag param="bpCtrl.backpacks"></backpacks-tag>
+
+                <br><br><hr>
+                <backpacks-table param="bpCtrl.backpacks"></backpacks-table>
+                <hr>
             </div>
         </div>
 
